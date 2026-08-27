@@ -140,3 +140,24 @@ deleted on the strength of the prompt alone.
 - Real backend or telemetry transport (FastAPI, MQTT)
 - Any machine learning in the active pipeline (archived; see above)
 - Multi-pipe networks, junctions, reflections, or dispersive propagation
+
+---
+
+## Repository & hosting (2026-08-27)
+
+- **Source control:** the project was migrated to git and pushed to a private
+  GitHub repo at `github.com/FunkySplash49/aeld-prototype`, branch `main`.
+  `.venv/`, `.idea/`, `.pytest_cache/`, `__pycache__/`, `.DS_Store`, and the
+  local Claude Code permission file (`.claude/settings.local.json`) are
+  gitignored.
+- **Live demo:** deployed on Streamlit Community Cloud at
+  `aeld-prototype.streamlit.app`, tracking `main` — a push to that branch
+  auto-redeploys. The GitHub repo is private, but the deployed app itself is
+  **publicly reachable** at that URL; Community Cloud's free tier does not
+  gate app viewing by repo visibility. Restricting viewers requires a paid
+  Streamlit tier.
+- **Backup:** a full snapshot of the repo (working tree + `.git` history,
+  same exclusions as above) was copied to a sibling directory,
+  `../aeld-prototype-backup-2026-08-27/`, as a point-in-time backup. It is a
+  plain filesystem copy, not a git remote — it will not receive future
+  commits pushed to GitHub, and is not itself pushed anywhere.
